@@ -1,0 +1,473 @@
+
+/* CSS code in expense.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height:90vh;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+
+.avatar-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.download-btn {
+  display: none;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-btn.active{
+  display:block;
+  left: 15vh;
+  top:-7.3vh;
+  transition: background-color 0.3s;
+}
+.msg .leaderboard{
+  display:none;
+  position: relative;
+  background-color: #4CAF50;
+  color: white;
+  left:25vh;
+  top:-6.3vh;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.msg .leaderboard.active{
+  display: block;
+  position: relative;
+  background-color: #4caf50;
+  color: white;
+  /* left:25vh; */
+  top:-6.3vh;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.msg .leaderboard:hover{
+  background-color: #45a049;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}
+
+.heading-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.heading {
+  margin: 0;
+}
+
+.list {
+  padding: 20px;
+}
+
+.list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.plus-icon {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plus-icon:hover {
+  background-color: #1976d2;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup.active{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup .form {
+
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  padding-right: 20px;
+  border: 2px solid #888;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form label,
+.form input[type='submit'] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  margin-top: 4px;
+  margin-left: 46%;
+  margin-right: 50%;
+  /* margin-bottom: 50%; */
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form label{
+  display: block;
+  text-align: center;
+
+}
+
+.form #Category{
+  display: block;
+  width:24vh;
+  margin: auto;
+  /* text-align: center; */
+}
+.form #Price{
+  display: block;
+  margin: auto;
+}
+.form #Product{
+  display: block;
+  margin: auto;
+}
+
+
+.form input[type='submit']:hover {
+  background-color: #45a049;
+  
+}
+
+.container {
+  padding: 20px;
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* .pagination-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} */
+#pagination {
+  background-color: #fefefe;
+  padding: 8px 16px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+#pagination h3{
+  color: #191515;
+  width: auto;
+  margin: -1px;
+  border: none;
+  cursor: pointer;
+}
+#pagination button{
+  /* margin: auto; */
+  color: #000000;
+  background-color: #45a049;
+  padding-top:-5px;
+  cursor: pointer;
+}
+
+#pagination button:hover{
+  background-color: #7be37f;
+  cursor: pointer;
+}
+/* .link .active{
+  background-color: #4CAF50;
+  pointer-events: none;
+  transition: background-color 0.3s ease-out;
+}
+.pagination-container a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination-container a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+
+
+.pagination-container button:hover {
+  background-color: #45a049;
+}
+
+.pagination-container button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+#prev-page,
+#next-page {
+  width: 80px;
+} */
+
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group label {
+  display: block;
+  font-size: small;
+  font-weight: bold;
+}
+.form-group label{
+  display: block;
+  font-weight: bold;
+}
+.form-group select {
+  padding: 3px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* ------------------------- for list code */
+
+/* CSS code in expense.css */
+
+.liList {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.liList button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.liList button:hover {
+  background-color: #c82333;
+}
+
+.liList button:focus {
+  outline: none;
+}
+
+.liList button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.liList button:disabled:hover {
+  background-color: #e0e0e0;
+}
+
+.liList button:disabled:focus {
+  outline: none;
+}
+
+/* CSS code in expense.css */
+
+.list-items {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+/* CSS code in expense.css */
+
+/* ...existing CSS styles... */
+
+.table-container {
+  padding: 20px;
+}
+
+#expenses {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#expenses th,
+#expenses td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#expenses th {
+  background-color: #f2f2f2;
+}
+
+#expenses td:last-child {
+  text-align: center;
+}
+
+#expenses button {
+  width: 50px;
+  font-size: 10px;
+  background-color: #ec1227;
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#expenses button:hover {
+  background-color: #9d2d2d;
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* code for .leaderboard css table list */
+
+/* Styles for the leaderboard table */
+#leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#leaderboard th,
+#leaderboard td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#leaderboard th {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the leaderboard heading */
+h1 {
+  position: relative;
+  padding-left: 80%;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Additional styles for the leaderboard */
+#head-board {
+  display:contents; /* Hide the table header initially */
+}
