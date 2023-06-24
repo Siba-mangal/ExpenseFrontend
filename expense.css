@@ -14,7 +14,20 @@ body {
   align-items: flex-start;
   padding: 5px;
 }
-
+.profile .logout{
+  /* display: flex;
+  align-items: end;
+  justify-content: end; */
+  margin-left: auto;
+  border-radius: 5px;
+  color:white;
+  background-color: red;
+  cursor: pointer;
+  box-shadow: none;
+}
+.profile .logout:hover{
+  background-color: rgb(200, 108, 108);
+}
 
 .avatar-link {
   width: 40px;
@@ -308,6 +321,23 @@ body {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.container button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: #191515;
+  box-shadow: 1px 1px 2px 2px black;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #177adc;
+  color: white !important;
+}
+.container button:hover{
+  background-color: #008cff;
+  
 }
 
 

@@ -13,15 +13,12 @@
       <button class="download-btn" onClick="download()" id="downloadExpense">
         Download File
       </button>
+      <button class="logout">logout</button>
     </div>
     <div id="message" class="msg"></div>
     <div class="heading-container">
       <h3 class="heading">Daily Expenses</h3>
     </div>
-
-    <!--<div class="list">
-      <ul id="expenses"></ul>
-    </div>-->
 
     <div class="table-container">
       <table id="expenses">
@@ -33,9 +30,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Table rows will be dynamically generated here -->
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
 
@@ -73,7 +68,6 @@
 
     <div class="container">
       <button id="rzp-button">Buy Premium</button>
-      <!--<ul id="leaderboard"></ul>-->
 
       <table id="leaderboard">
         <thead id="head-board"></thead>
@@ -82,15 +76,6 @@
     </div>
 
     <div class="pagination-container">
-      <!--<div id="pagination-links">
-        <button class="prev-page" id="prev" disabled>&laquo;</button>
-        <a href="/?page=1" class="link active">1</a>
-        <a href="/?page=2" class="link">2</a>
-        <a href="/?page=3" class="link">3</a>
-        <a href="/?page=4" class="link">4</a>
-        <a href="/?page=5" class="link">5</a>
-        <button class="next-page" id="next">&raquo;</button>
-      </div>-->
       <button id="pagination"></button>
     </div>
     <script src="expense.js" async defer></script>

@@ -13,7 +13,7 @@ function signUp(event) {
   };
   // console.log(myObj);
   axios
-    .post("https://expense-tracker-woys.onrender.com/user/signup", myObj)
+    .post("http://localhost:3000/user/signup", myObj)
     .then((response) => {
       if (response.status === 201) {
         message.removeAttribute("hidden");

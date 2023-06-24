@@ -1,0 +1,19 @@
+{
+  "name": "views",
+  "version": "1.0.0",
+  "description": "",
+  "main": "expense.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siba-mangal/ExpenseTrackerFrontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siba-mangal/ExpenseTrackerFrontend/issues"
+  },
+  "homepage": "https://github.com/Siba-mangal/ExpenseTrackerFrontend#readme"
+}

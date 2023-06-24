@@ -29,6 +29,10 @@ document.querySelector(".profile").addEventListener("click", function () {
     led.classList.add("active");
   }
 });
+document.querySelector(".logout").onclick = function () {
+  location.href = "login.html";
+  localStorage.clear();
+};
 
 // -------------------------------------
 const tbody = document.querySelector("#expenses tbody");
@@ -49,7 +53,7 @@ selectElement.addEventListener("change", async () => {
   const expensedata = await axios.get(
     `https://expense-tracker-woys.onrender.com/expense/get-expense?param1=${pageno}&param2=${rowsize}`,
     {
-      headers: { Authorization: token },
+      headers: { Authorization: `Bearer ${token}` },
     }
   );
   showPagination(
@@ -85,7 +89,7 @@ function saveToDatabase(e) {
       "https://expense-tracker-woys.onrender.com/expense/add-expense",
       obj,
       {
-        headers: { Authorization: token },
+        headers: { Authorization: `Bearer ${token}` },
       }
     )
     .then((response) => {
@@ -100,7 +104,7 @@ function saveToDatabase(e) {
   e.target.Price.value = "";
   e.target.Product.value = "";
   e.target.Category.value = "";
-  location.reload();
+  // location.reload();
 }
 
 function parseJwt(token) {
@@ -139,7 +143,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const expensedata = await axios.get(
     `https://expense-tracker-woys.onrender.com/expense/get-expense?param1=${PageNo}&param2=${pageSize}`,
     {
-      headers: { Authorization: token },
+      headers: { Authorization: `Bearer ${token}` },
     }
   );
 
@@ -202,7 +206,7 @@ function deleteUser(e, UserId) {
     .delete(
       `https://expense-tracker-woys.onrender.com/expense/delete-expense/${UserId}`,
       {
-        headers: { Authorization: token },
+        headers: { Authorization: `Bearer ${token}` },
       }
     )
     .then((response) => {
@@ -233,7 +237,7 @@ function showLeaderboard() {
     const token = localStorage.getItem("token");
     const userLeaderBoardArray = await axios.get(
       "https://expense-tracker-woys.onrender.com/premium/showLeaderBoard",
-      { headers: { Authorization: token } }
+      { headers: { Authorization: `Bearer ${token}` } }
     );
     console.log(userLeaderBoardArray);
 
@@ -263,7 +267,7 @@ document.getElementById("rzp-button").onclick = async function (e) {
   const token = localStorage.getItem("token");
   const response = await axios.get(
     "https://expense-tracker-woys.onrender.com/purchase/premiummembership",
-    { headers: { Authorization: token } }
+    { headers: { Authorization: `Bearer ${token}` } }
   );
   var options = {
     key: response.data.key_id,
@@ -276,7 +280,7 @@ document.getElementById("rzp-button").onclick = async function (e) {
           payment_id: response.razorpay_payment_id,
         },
         {
-          headers: { Authorization: token },
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       // console.log(res);
@@ -300,7 +304,7 @@ function download() {
 
   axios
     .get("https://expense-tracker-woys.onrender.com/expense/download", {
-      headers: { Authorization: token },
+      headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
       if (response.status == 201) {
@@ -372,7 +376,7 @@ async function getProducts(page) {
   const expensedata = await axios.get(
     `https://expense-tracker-woys.onrender.com/expense/get-expense?param1=${page}&param2=${pagesize}`,
     {
-      headers: { Authorization: token },
+      headers: { Authorization: `Bearer ${token}` },
     }
   );
   console.log("getProducts", expensedata);
